@@ -1,0 +1,324 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body{
+    height: 100vh;
+    background-color: #0e3742;
+}
+
+@media screen and (max-width: 700px) {
+    body{
+        width: 100%;
+        background-color: #0e3742;
+    }
+}
+
+#home{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #0e3742;
+    background-image: url(images/Elecsta_logo.jpg);
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
+    background-size: cover;
+}
+
+#home h1{
+    position: relative;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 7rem;
+    letter-spacing: 0px;
+    font-weight: 700;
+    line-height: 0.70em;
+    -webkit-box-reflect: below 1px linear-gradient(transparent,#0004);
+    outline: none;
+    animation: animate 5s linear infinite;
+}
+
+
+@keyframes animate
+{
+    0%,20%,50.1%,60%,60.1%,80%,90.1%,92%
+    {
+        color: #fdd10d;
+        text-shadow: none;
+    }
+    18.1%,20.1%,30%,50%,60.1%,65%,80.1%,90%,92.1%,100%
+    {
+        color: #fff;
+        text-shadow: 0 0 10px #03bcf4,
+        0 0 20px #03bcf4,
+        0 0 40px #03bcf4,
+        0 0 80px #03bcf4,
+        0 0 160px #03bcf4;
+
+    }
+}
+
+@media screen and (max-width: 700px) {
+    #home h1{
+        font-size: 2.3rem;
+        text-align: center;
+        margin-bottom: 60px;
+    }
+    #home{
+        background-image: url(images/Elecsta_logo_for_mobile_screen.jpg);
+    }
+    
+}
+
+#home_h2{
+    color: aqua;
+    text-align: center;
+    font-size: 1.7rem;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+@media screen and (max-width: 700px) {
+    #home_h2{
+       font-size: 1.5rem;
+       margin-top: 0px;
+    }
+}
+
+.home_first_para{
+    font-size: 1.5rem;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.home_second_para{
+    color: white;
+    margin: 10px 50px;
+    font-size: 1.3rem;
+    text-indent: 60px;
+    text-align: justify;
+}
+
+.home_third_para{
+    color: black;
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-shadow: 0 0 3px white;
+}
+
+.home_third_para_span:hover{
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: white;
+    text-shadow: 0 0 5px #03bcf4;
+}
+
+@media screen and (max-width: 700px){
+    
+    .home_first_para{
+        font-size: 1.6rem;
+        color: white;
+        margin-bottom: 10px;
+    }
+    
+    .home_second_para{
+        color: white;
+        margin: 20px 15px;
+        font-size: 1.2rem;
+        text-indent: 50px;
+        text-align: start;
+        text-shadow: 0 0 10px black;
+    }
+    
+    .home_third_para{
+        color: grey;
+        font-size: 1.2rem;
+        font-weight: 600;
+        margin: 10px 10px;
+        text-indent: 50px;
+        text-shadow: none;
+    }
+    
+    .home_third_para_span:hover{
+        cursor: pointer;
+        font-size: 1.5rem;
+        color: white;
+        text-shadow: 0 0 10px #03bcf4;
+    }
+}
+
+.countdown{
+    display: flex;
+    margin: 0 0 10px 0;
+}
+
+.time{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+}
+
+#days{
+    width: 40px;
+    color: black;
+    text-align: center;
+}
+
+#hours{
+    width: 40px;
+    text-align: center;
+}
+
+#minutes{
+    width: 40px;
+    text-align: center;
+}
+
+#seconds{
+    width: 40px;
+    text-align: center;
+}
+
+@media screen and (max-width:700px){
+    #days{
+        width: 45px;
+        color: black;
+        text-align: center;
+    }
+    
+    #hours{
+        width: 45px;
+        text-align: center;
+    }
+    
+    #minutes{
+        width: 45px;
+        text-align: center;
+    }
+    
+    #seconds{
+        width: 45px;
+        text-align: center;
+    }
+    
+}
+
+#time_days{
+    margin-right: 25px;
+}
+#time_hours{
+    margin-right: 10px;
+}
+
+#time_seconds{
+    margin-left: 0px;
+}
+
+@media screen and (max-width:475px){
+    .time{
+        margin: 5px;
+    }
+    #time_days{
+        margin-right: 10px;
+    }
+    #time_hours{
+        margin-right: 7px;
+    }
+    #time_minutes{
+        margin-right: 11px;
+    }
+    .countdown{
+        margin: 15px 0 5px 0;
+    }
+}
+
+.timeh2{
+    font-size: 1.4rem;
+    padding: 5px;
+    background-color: white;
+    border-radius: 3px;
+    box-shadow: 0px 0px 9px 5px #03bcf4;
+}
+
+@media screen and (max-width:700px){
+    .timeh2{
+        font-size: 1.5rem;
+    }
+    #days_small{
+        margin-top: 7px;
+        font-size: 15px;
+        color: white;
+        text-shadow: 0 0 5px gold;
+    }
+    #hours_small{
+        margin-top: 7px;
+        font-size: 15px;
+        color: white;
+        text-shadow: 0 0 5px gold;
+    }
+    #minutes_small{
+        margin-top: 7px;
+        font-size: 15px;
+        color: white;
+        text-shadow: 0 0 5px gold;
+    }
+    #seconds_small{
+        margin-top: 7px;
+        font-size: 15px;
+        color: white;
+        text-shadow: 0 0 5px gold;
+    }
+}
+
+.small{
+    margin-top: 5px;
+    font-size: 25px;
+    color: white;
+    text-shadow: 0 0 5px gold;
+}
+
+#register{
+    padding: 5px 10px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    border-radius: 15px;
+    padding: 10px 20px;
+    cursor: pointer;
+    color: white;
+    background-color: black;
+    transition: background-color 0.5s;
+}
+
+@media screen and (max-width: 700px){
+    #register{
+        margin-top: 30px;
+        color: white;
+    }
+}
+
+#register:hover{
+    font-size: 1.8rem;
+    box-shadow: 0px 0px 15px 2px #03bcf4;
+    transition: font-size 0.1s ease-out;
+}
+
+@media screen and (max-width: 700px){
+    #register:hover{
+        font-size: 1.8rem;
+    }
+}
+
+
+
+
+
+
+

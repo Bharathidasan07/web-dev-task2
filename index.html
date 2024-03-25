@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>ECE</title>
+</head>
+<body>
+    <div id="home">
+        <h1>ELECSTA 2K24</h1>
+        <h2 id="home_h2">A National Level Technical Symposium</h2>
+        <p class="home_first_para">ELECSTA 2k24 is here ! 
+        </p>
+        <p class="home_second_para">
+            ELECSTA from the Electronics and Communication Department of Government  College of Engineering, Dharmapuri is a national level symposium to be held on 4th April consists of a series of technical events for acquiring knowledge and other fun activities to make the stay memorable.
+            It is completely organized by a team of dedicated students to manifest the spirit of students of Electronics and Communication Engineering and enable the participants to showcase their talents. But that’s not all! We’ve got exciting prizes for the winners.
+        </p>
+        <p class="home_third_para">
+            <span class="home_third_para_span">Register now</span> and join us to interact with the technical ideas and build your knowledge with lots of fun.
+        </p>
+        <div class="countdown" id="countdown">
+            <div class="time" id="time_days">
+                <h2 id="days" class="timeh2"></h2>
+                <small class="small" id="days_small">Days</small>
+            </div>
+            <div class="time" id="time_hours">
+                <h2 id="hours" class="timeh2"></h2>
+                <small class="small" id="hours_small">Hours</small>
+            </div>
+            <div class="time" id="time_minutes">
+                <h2 id="minutes" class="timeh2"></h2>
+                <small class="small" id="minutes_small">Minutes</small>
+            </div>
+            <div class="time" id="time_seconds">
+                <h2 id="seconds" class="timeh2"></h2>
+                <small class="small" id="seconds_small">Seconds</small>
+            </div>
+        </div>
+        <button id="register">Register</button>
+    </div>
+
+</body>
+<script>
+    
+    var countDownDate = new Date("Apr 4, 2024 09:00:00").getTime();
+    var x = setInterval(function(){
+        var now = new Date().getTime();
+        var distance = countDownDate - now;
+
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        document.getElementById("days").innerHTML = days;
+        document.getElementById("hours").innerHTML = hours;
+        document.getElementById("minutes").innerHTML = minutes;
+        document.getElementById("seconds").innerHTML = seconds;
+
+        if(distance < 0){
+            clearInterval(x);
+            document.getElementById("days").innerHTML = "00";
+            document.getElementById("hours").innerHTML = "00";
+            document.getElementById("minutes").innerHTML = "00";
+            document.getElementById("seconds").innerHTML = "00";
+        }
+
+    },1000);
+
+</script>
+</html>
+
